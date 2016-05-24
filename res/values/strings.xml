@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EMPIO</string>
+    <string name="ouya_button_u_text">Settings</string>
+    <string name="ouya_button_y_text">Install An App</string>
+    <string name="menu_o">Return</string>
+    <string name="menu_u">Edit Map</string>
+    <string name="menu_y">Reload Map</string>
+	<string name="menu_a">Quit</string>
+	<string name="mapper_top_title">Press the button you would like to map</string>
+	<string name="mapper_bottom_title">Hold the menu button to finish</string>
+	<string name="prefs_general">General</string><string name="prefs_launcher">Launcher Preferences</string>
+	<string name="prefs_service">Mapper Preferences</string>
+	<integer-array name="donatevalues">
+		<item >1</item>
+		<item >5</item>
+		<item >10</item>
+		<item >25</item>
+	</integer-array>
+	<string name="donatetitle">Donate amount</string>
+	<string-array name="pref_buttonpressnames">
+		<item >On Press</item>
+		<item >On Release</item>
+		<item >Hold and Release</item>
+	</string-array>
+	<integer-array name="pref_buttonpressvalues">
+		<item >1</item>
+		<item >0</item>
+		<item >2</item>
+	</integer-array>
+	<item type="integer" name="pref_buttonpressdefault" format="integer">2</item>
+	<string-array name="introtitles">
+		<item >Overview</item>
+		
+		<item >Button Maps</item>
+		<item >Analog Maps</item>
+		<item>Callbacks</item><item>Functions</item><item >The Map File</item>
+		<item >Coming Soon</item>
+		
+	</string-array>
+	<string-array name="introtexts">
+		<item >EMPIO lets you map different input devices to whatever you want. Currently supporting Ouya and PS3 controllers, you can map your controller to a touchscreen, other buttons, or built in callbacks and functions.</item>
+		
+		<item >Buttons may be mapped to other gamepad or android buttons, a touch screen press, or built in callbacks such as changing sets/cycles or setting a variable to check later. New mappings will be added later.</item>
+		<item >The analog sticks can be mapped to the dpad, any analog stick, an on screen touch analog stick, or navigation through cycle points. More mappings will be added in the future.</item>
+		<item >There are many different assignable callbacks, including navigating cycles, changing sets/cycles, selecting a cycle point, assigning/getting a variable, and more. New callbacks will be added in the future.</item><item>In addition to mapping buttons, there are some built in funtions available. Currently, you can assign special callbacks with them, and more functions will be availble in the future.</item>
+		<item >The map file is what tells the system what and how something will be mapped. Each app has a mapping file, which defaults to the standard Ouya controller map if there isn\'t one.  See help under options for more information.</item>
+		<item >A wide variety of new features will be coming in future updates, including an on screen mapping utility, new button/analog map features, and basic map conditional statements.</item>
+	</string-array>
+	<string name="purchase_media_title">media title</string>
+	<string name="purchase_media_text">media text</string>
+	<string name="purchase_features_title">Pro Features</string>
+	<string name="purchase_features_text">features text</string>
+	<string name="purchase_main_title">EMPIO Pro</string>
+	<string name="purchase_main_text">Would you like to purchase EMPIO for $4.99?</string>
+	<string-array name="pref_triggers">
+		<item >Button pressed</item>
+		<item >Button released</item>
+		<item >Individual</item>
+	</string-array>
+	<integer-array name="pref_triggervalues">
+		<item >1</item>
+		<item >0</item>
+		<item >2</item>
+	</integer-array>
+	
+</resources>

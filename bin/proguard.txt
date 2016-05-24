@@ -1,0 +1,48 @@
+# view AndroidManifest.xml #generated:38
+-keep class com.chrisjdowd.empio.FileManager { <init>(...); }
+
+# view AndroidManifest.xml #generated:46
+-keep class com.chrisjdowd.empio.FirstTimeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:25
+-keep class com.chrisjdowd.empio.GameLauncher { <init>(...); }
+
+# view AndroidManifest.xml #generated:45
+-keep class com.chrisjdowd.empio.OverscanActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:35
+-keep class com.chrisjdowd.empio.Preferences { <init>(...); }
+
+# view AndroidManifest.xml #generated:59
+-keep class com.chrisjdowd.empio.WiimoteSyncActivity { <init>(...); }
+
+# view res/layout/mapper.xml #generated:2
+-keep class com.chrisjdowd.empio.mapper.ControllerMapper { <init>(...); }
+
+# view AndroidManifest.xml #generated:41
+-keep class com.chrisjdowd.empio.mapper.MapperService { <init>(...); }
+
+# view AndroidManifest.xml #generated:50
+-keep class com.paypal.android.sdk.payments.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:48
+-keep class com.paypal.android.sdk.payments.PayPalService { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.paypal.android.sdk.payments.PaymentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:53
+-keep class com.paypal.android.sdk.payments.PaymentCompletedActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class com.paypal.android.sdk.payments.PaymentConfirmActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:51
+-keep class com.paypal.android.sdk.payments.PaymentMethodActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:55
+-keep class io.card.payment.CardIOActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:58
+-keep class io.card.payment.DataEntryActivity { <init>(...); }
+

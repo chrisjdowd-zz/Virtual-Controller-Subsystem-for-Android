@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory 
+        android:title="@string/prefs_service">
+        <PreferenceScreen 
+            android:title="Adjust for Overscan">
+            <intent 
+                android:action="android.intent.action.MAIN" 
+                android:targetPackage="com.chrisjdowd.empio" 
+                android:targetClass="com.chrisjdowd.empio.OverscanActivity" />
+        </PreferenceScreen>
+       	
+       	<CheckBoxPreference 
+       	    android:key="pref_overlaycp" 
+       	    android:title="Overlay Cycle Point" 
+       	    android:summary="Overlay the cycle point on the screen" 
+       	    android:defaultValue="true"/>
+        <EditTextPreference 
+            android:title="Cycle indicator timeout" 
+            android:key="pref_cycletimeout" 
+            android:summary="Timeout in ms before indicator disappears" 
+            android:defaultValue="500" 
+            android:dependency="pref_overlaycp" android:enabled="false"/>
+        
+       <!--  <ListPreference 
+            android:summary="When to press virtual button" 
+            android:title="Button press trigger" 
+            android:key="pref_whentomap"
+            android:entryValues="@array/pref_triggervalues" 
+            android:entries="@array/pref_triggers"
+            android:enabled="false"/>
+        <ListPreference 
+            android:key="pref_whentocb" 
+            android:summary="When to trigger callbacks" 
+            android:title="Callback trigger" 
+            android:entryValues="@array/pref_triggervalues" 
+            android:entries="@array/pref_triggers"
+            android:enabled="false"/>     -->
+        </PreferenceCategory>
+    <PreferenceCategory 
+        android:title="@string/prefs_general">
+        <PreferenceScreen android:title="Re-copy Ouya map" android:key="pref_copymap"></PreferenceScreen>
+        <CheckBoxPreference 
+            android:title="Create mapping file automatically" 
+            android:key="pref_createfiles" 
+            android:defaultValue="true" />       
+        <CheckBoxPreference 
+            android:summary="Log errors to /sdcard/OUYA Mappings/log.txt" 
+            android:title="Log Errors" 
+            android:key="pref_logerrors" 
+            android:enabled="false"/>
+        <!-- <CheckBoxPreference 
+            android:summary="Show errors on screen" 
+            android:title="Show Errors" 
+            android:key="pref_showerrors" 
+            android:dependency="pref_logerrors" 
+            android:enabled="false"/> -->
+        <PreferenceScreen android:title="Purchase Pro Version" android:key="pref_purchase"></PreferenceScreen>
+        <PreferenceScreen android:title="Backup license to SD" android:key="pref_backup"></PreferenceScreen>
+        <PreferenceScreen android:title="Restore license from SD" android:key="pref_restore"></PreferenceScreen>
+    <PreferenceScreen 
+        android:title="Sync Wiimote" 
+        android:key="pref_sync_wiimote">
+        <intent 
+                android:action="android.intent.action.MAIN" 
+                android:targetPackage="com.chrisjdowd.empio" 
+                android:targetClass="com.chrisjdowd.empio.WiimoteSyncActivity" />
+    </PreferenceScreen>
+</PreferenceCategory>
+   <!-- <PreferenceScreen
+       android:title="Donate"
+       android:key="pref_donate">
+       <intent
+           android:action="android.intent.action.MAIN"
+           android:targetPackage="com.chrisjdowd.empio"
+           android:targetClass="com.chrisjdowd.empio.DonateDialog" />
+   </PreferenceScreen> -->
+</PreferenceScreen>

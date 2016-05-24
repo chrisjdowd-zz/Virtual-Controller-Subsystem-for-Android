@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chrisjdowd.empio.mapper.ControllerMapper 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapbase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/topTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mapper_top_title"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/buttonfinish"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ouya_system" />
+
+        <TextView
+            android:id="@+id/bottomTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mapper_bottom_title"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </LinearLayout>
+
+</com.chrisjdowd.empio.mapper.ControllerMapper>

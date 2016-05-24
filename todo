@@ -1,0 +1,174 @@
+CHANGE BEFORE UPLOADING
+phone needs to check what type of controller
+swap x/y in map not mapper - less logic
+set methods for TS/MAPPER instead of in init
+change TS size on map reload if orientation changed
+
+
+
+reload map should reposition status if changed?
+
+
+for analog mapping: should map to outputkeys analog
+
+
+
+TEST:
+purchasing, loading/saving receipt
+
+
+360 controller:
+setup
+wireless 360 receiver shows all 4 devices even when none connected. find way to see what's connected
+wireless 360 set led properly. write driver?
+
+Ouya:
+find way to set mapped controller to player number
+
+Phone/Tablet:
+Device specific layouts - handle landscape/portrait by switching x,y. very simple.
+touchscreen size based on resolution
+	need portrait or landscape option in mapping. swap x/y if landscape
+	or pro version get orientation automagically
+	note in controllermanager()
+
+Devices:
+Wiimote + nunchuk
+mouse & keyboard
+allow mouse/keyboard - both at same time means starting new manager per device. really..not hard actually
+	doing this allows mulitplayer as well
+
+Payments:
+//implement hashing algorithm for free codes
+Paypal purchase
+Donate through ouya
+donate through paypal
+
+Misc:
+start app goes immediately into service. manage purchased inside service. entirely service based app. perfect
+analog shoulder buttons
+analogdpadanalog needs maparg for which analog
+redo kmee to have controller and different options for all buttons. basically a redo of everything?
+update ouya map
+mouse
+debug app closing segfault
+prefs for menu/status transparency
+overlay buttons on screen w/transparency & color|b&w options
+default map should be ouya, reloading should give map or ouya if not. no more n/a. 
+change setprev/next cycleprev/next to not rely on position (get pos before running), or set position when loading map
+deadzone preferences
+replace service.sendbroadcast in manager with handler
+finish implementing drag/gesture support
+notification for closing service when it doesn't respond right
+cycleselect callback select by key or touch
+cyclepressed key or touch
+map to keyboard keys
+*if more than one controller found in kmee, popup which one to use
+base cycles on 2d arrays [cyclepos] = x:y, name, min/max, etc
+SWITCH MENU/MAPPER TO NEW THREADS - START THREAD WHEN BUTTON PRESSED, STOP IT WHEN DONE. 
+out of  bounds cyclepoint should be preemptive and not allow out of bounds
+identify controllers in a unique way, instead of using names
+uses way too much memory?
+RESEARCH WHEN DONE?: using xposed to gain access to windows in apps. touch/manipulate views
+*service should search for controller every x seconds? will find first good controller by default. 
+	if there's 2 controllers,
+	if p1 disconnects p2 will now work. must find a new way to assign controller?
+*start service while in app (spinner waiting thing) then start app. cuts down on lag and makes sure the controller is there
+
+
+redo gamelauncher progressdialog handler
+	0 = close, launch app
+	1 = set to reading receipt
+	2 = set to root
+	
+	
+set, leftanalog, direction, analog, analogstick, direction
+set, leftanalog, direction, key, button, threshhold
+set, leftanalog, touchmouse, deadzone to move touch cursor on screen
+macro, setname, inbutton, o+u, y, l1+r1+a
+	if + in funcarg: both at same time. put into array as +,:,or ,
+		in manager
+		for each key in macro
+			split(:,+)
+			foreach split
+				press down
+			foreach split
+				release
+			will work fine for single ones and for others it'll macro
+
+add custom controller mapping
+activity
+onkeydown
+keycode == button press
+bring up dialog to give it a name
+save mapping as "controller name_map.ini" or something
+if using custom controller
+	load map on start
+put name:code into inputButtons
+bam, new controller works
+
+
+switch mapper overlay to being in mapperthread? looper problems? figure it out
+mapper should bring dialog up first and ask what to do
+	new map
+		map button
+			listen for type==1 value==0
+			get code
+			ask type of mapping
+				maptypes
+				etc
+		map analog
+			full on screen analog
+				listen for axis,check which stick it belongs to
+			dpad
+				same as above
+				get threshold
+				implimentation: in manager: if value>valuemax-threshold = dpad direction
+			individual directions
+				should normalize values and average out to see which direction was pressed
+				get direction with analogmax/2 as center reference
+				map to key/touch
+		cycle
+			choose rows/cols
+			new array[rows][cols]
+			choose on screen position
+			put number on screen at position
+			put into array at next spot
+			menu when done
+			numitems will be position when done
+			stop when rows/cols filled up too
+		cyclepressed 
+			choose set/cycle
+			choose row/col
+			choose maptype and args
+		cycleselected
+			same as above
+	edit map
+		same as above
+
+preferences
+general
+create file/folder automatically
+order of controllers to find
+download mappings
+log information
+show information
+
+service
+option for press and hold or just quick press
+overlay buttons
+	show cyclepoint
+	cp timeout
+	cp opacity
+	button opacity
+	button size
+	color/b&w
+send bug report
+buy pro
+donate
+
+
+try redoing whole map system where it loads all code into a single thing
+	mapping = currentset,button
+	maptype = mapping[0]
+	args = mapping[1+]	
